@@ -1,0 +1,10 @@
+phpway:
+  build: .
+  hostname: phpwaymx
+  domainname: phpway.dev
+  container_name: phpway-dev
+  ports:
+    - "9081:80"
+  volumes:
+    - .:/app
+
