@@ -22,8 +22,8 @@ $app->register(new SessionServiceProvider());
 $app->register(new OAuthServiceProvider(),[
     'oauth.services'=> [
         'Twitter' => [
-            'key' => TWITTER_KEY,
-            'secret' => TWITTER_SECRET,
+            'key' => getenv('TWITTER_KEY'),
+            'secret' => getenv('TWITTER_SECRET'),
             'scope' => [],
             // Note: permission needs to be obtained from Twitter to use the include_email parameter
             'user_endpoint' => 'https://api.twitter.com/1.1/account/verify_credentials.json?include_email=true',
