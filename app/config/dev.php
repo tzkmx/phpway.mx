@@ -2,5 +2,7 @@
 
 require __DIR__ . '/prod.php';
 
-$app['debug'] = true;
+if(!defined('APPLICATION_ENV')) {
+    $app['debug'] = true;
+}
 
