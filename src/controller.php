@@ -1,9 +1,10 @@
 <?php
 
 $app->get("/", function() use ($app) {
-    return "homepage";
+    return $app['twig']->render('index.html.twig');
 
 })
+
 ->bind("home");
 
 $app->get("/login", function() use($app) {
